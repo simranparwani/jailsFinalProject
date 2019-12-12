@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Prison Data</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a id="navbarlink" href="index.html">Home</a></li>
+            <li><a id="navbarlink" href="/second">Analysis</a></li>
+            <li><a id="navbarlink" href="/third">Simulation</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1 id="intro"> INTRODUCTION </h1>
+        <!--
+        <div class="wrapper">
+          <a class="button" href="#simulation">START SIMULATION</a>
+        </div>
+      -->
+        <p class="lead" id="analysis">Discrimination in law enforcement, especially in the United States, has been a prominent topic of conversation for decades. People argue that POC are more likely to be detained by the police, they are more likely to be arrested, and that their bails are set higher when compared to other white criminals. In any given year, approximately 11 million Americans are detained in county jails, and yet we know little about local jail practices.</p>
+      </div>
+
+      <div class="bottom-template">
+        <h1><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> ANALYSIS <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Objectives</h2>
+          <p>Our group analyzed a set of prison data pulled from the Jail Data Initiative at NYU’s Public Safety Lab. The data covered the individuals at Cumberland, NJ county jail over the course of a month. Our goal was to explore issues of race and ethnicity in law enforcement by analyzing crime reports from numerous states in America. [more info here] Based on the data, we drew the conclusion that [more info here].</p>
+          <img src="static/map.png" style="width:100%;max-width:150px" class="centerimage">
+        </div>
+        <div class="col-md-4">
+          <h2>Method</h2>
+          <p>The variables that we used in our analysis were Skin Tone, Charge, Bail, and Bail Amount. We created a perception algorithm that, with an input of Skin Tone and Charge, generated an output of predicted Bail and Bail Amount.</p>
+          <img src="static/data.png" id="myImg" style="width:100%;max-width:400px" class="centerimage">
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h2>Results</h2>
+          <p>[put results here]</p>
+        </div>
+        <div class="col-md-4">
+          <h2 id="simulation">Sources</h2>
+          <p>[brief summary of Jail Data Initiative and link to their page]<br />Click <a href="https://publicsafetylab.org/jail-data-initiative" style="text-align:center">here</a> to learn more about NYU Public Safety Lab's Jail Data Initiative.</p>
+        </div>
+      </div>
+
+      <div class="starter-template">
+        <h1 id="intro" style="text-align:center; margin-bottom: 40px;"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> FACTORS <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></h1>
+        <p class="simulationbox">
+          <div class="simulation">
+            <form action="/second" method="post">
+          <div class="simbuttonwrapper">
+            
+            <input type="radio" name="factor" id="skintone" value="skintone" onClick="this.form.submit();"><label for='skintone' class="button" class="centerimage">Skin Tone</label>
+            <input type="radio" name="factor" id="gender" value="gender" onClick="this.form.submit();"><label for='gender' class="button" class="centerimage" >Gender</label>
+            <input type="radio" name="factor" id="citizenship" value="citizenship" onClick="this.form.submit();"><label for='citizenship' class="button" class"centerimage">Citizenship Status</label>
+          
+          </div>
+          </form>
+          <br />
+          <br />
+          <p> {{ var_name1 }}</p>
+          </div>
+        </p>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
