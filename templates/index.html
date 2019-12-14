@@ -31,7 +31,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a id="navbarlink" href="index.html">Home</a></li>
-            <li><a id="navbarlink" href="/second">Analysis</a></li>
+            <li><a id="navbarlink" href="/">Analysis</a></li>
             <li><a id="navbarlink" href="/third">Simulation</a></li>
           </ul>
         </div>
@@ -47,7 +47,7 @@
           <a class="button" href="#simulation">START SIMULATION</a>
         </div>
       -->
-        <p class="lead" id="analysis">Discrimination in law enforcement, especially in the United States, has been a prominent topic of conversation for decades. People argue that POC are more likely to be detained by the police, they are more likely to be arrested, and that their bails are set higher when compared to other white criminals. In any given year, approximately 11 million Americans are detained in county jails, and yet we know little about local jail practices.</p>
+        <p class="lead" id="analysis">Overincarceration and discrimination in law enforcement, especially in the United States, have been prominent topics of conversation in the past decade. It is argued that people of color are more likely to be detained by the police, more likely to be arrested, and that Lheir bails are set higher when compared to whiLe individuals. In any given year, approximately 11 million Americans are detained in county jails, and many lack the funds to post bail or pay fines. We tend to focus on federal prison systems, and know little about local jail practices.</p>
       </div>
 
       <div class="bottom-template">
@@ -57,12 +57,12 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Objectives</h2>
-          <p>Our group analyzed a set of prison data pulled from the Jail Data Initiative at NYU’s Public Safety Lab. The data covered the individuals at Cumberland, NJ county jail over the course of a month. Our goal was to explore issues of race and ethnicity in law enforcement by analyzing crime reports from numerous states in America. [more info here] Based on the data, we drew the conclusion that [more info here].</p>
+          <p>Our group analyzed a set of prison data supplied to us by the Jail Data Initiative at NYU's Public Safety Lab. The data covered the individuals at Cumberland, NJ county jail over the course of over two months. Our goal was to explore issues of race and ethnicity in law enforcement by analyzing specific inmate information from a jail over a span of time. Data analysis is vital in determining the severity and patterns of overincarceration and discrimination in prisons. Therefore, we want to make this subsect of data more easily interpretable for the Prison Data Initiative and for other people interested in this issue.</p>
           <img src="static/map.png" style="width:100%;max-width:150px" class="centerimage">
         </div>
         <div class="col-md-4">
           <h2>Method</h2>
-          <p>The variables that we used in our analysis were Skin Tone, Charge, Bail, and Bail Amount. We created a perception algorithm that, with an input of Skin Tone and Charge, generated an output of predicted Bail and Bail Amount.</p>
+          <p>The variables that we used in our analysis were Skin Tone, Gender, Citizenship Status, Charge, Bail, and Bail Amount. After experimenting with various modes of analysis, we ended up primarily comparing White vs. Non-white, Male vs. Female, Citizen vs. Non-citizen Bail and Bail Amounts. We also found the top charges, bail/no-bail percentages, and bail averages for different demographic groups. To analyze the data, we used pandas and regular expressions. To display our analysis, we used HTML, CSS, Javascript, a Flask app, and Flourish.</p>
           <img src="static/data.png" id="myImg" style="width:100%;max-width:400px" class="centerimage">
           <div id="myModal" class="modal">
             <span class="close">&times;</span>
@@ -70,26 +70,26 @@
             <div id="caption"></div>
           </div>
         </div>
-        <div class="col-md-4">
-          <h2>Results</h2>
-          <p>[put results here]</p>
-        </div>
+        
         <div class="col-md-4">
           <h2 id="simulation">Sources</h2>
-          <p>[brief summary of Jail Data Initiative and link to their page]<br />Click <a href="https://publicsafetylab.org/jail-data-initiative" style="text-align:center">here</a> to learn more about NYU Public Safety Lab's Jail Data Initiative.</p>
+          <p>The Jail Data Initiative are a team of engineers, data scientists, researchers, and affiliated faculty who are working to use prison data from throughout the United States to explore issues of race and ethnicity in our county jail system. <br />Click <a href="https://publicsafetylab.org/jail-data-initiative" style="text-align:center">here</a> to learn more about NYU Public Safety Lab's Jail Data Initiative.</p>
         </div>
       </div>
-
-      <div class="starter-template">
-        <h1 id="intro" style="text-align:center; margin-bottom: 40px;"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> FACTORS <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></h1>
+<br>
+<!-- <h1 id="intro" style="text-align:center; margin-bottom: 40px;"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> FACTORS <span class="glyphicon glyphicon-minus" aria-hidden="true"></span></h1> -->
+      <div class="starter-template" style="margin-top:150px;">
+        
         <p class="simulationbox">
           <div class="simulation">
-            <form action="/second" method="post">
+          <form action="/second" method="post">
           <div class="simbuttonwrapper">
             
             <input type="radio" name="factor" id="skintone" value="skintone" onClick="this.form.submit();"><label for='skintone' class="button" class="centerimage">Skin Tone</label>
             <input type="radio" name="factor" id="gender" value="gender" onClick="this.form.submit();"><label for='gender' class="button" class="centerimage" >Gender</label>
-            <input type="radio" name="factor" id="citizenship" value="citizenship" onClick="this.form.submit();"><label for='citizenship' class="button" class"centerimage">Citizenship Status</label>
+            <input type="radio" name="factor" id="citizenship" value="citizenship" onClick="this.form.submit();"><label for='citizenship' class="button" class="centerimage">Citizenship Status</label>
+          
+          
           
           </div>
           </form>

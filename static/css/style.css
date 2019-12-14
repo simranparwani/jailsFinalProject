@@ -171,22 +171,19 @@ h3 {
 }
 
 .simulation {
-  margin-top: -600px;
+  margin-top: -400px;
   text-align: center;
   font-size: 18px;
   background-color: white;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   box-shadow: 10px 8px #de4545;
   border-radius: 8px;
-  height: 600px;
+  height: 400px;
   width: 70%;
   margin-left: 15%;
   margin-right: 15%;
 }
 
-[type=checkbox]:checked + label {
-  background-color: #c1534e;
-}
 .col-md-4 {
   background-color: white;
   margin: 20px;
@@ -269,13 +266,6 @@ h2 {
 
 ol {
   font-size:1.5rem;
-}
-
-#citizenship, #gender, #skintone {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
 }
 
 

@@ -45,7 +45,7 @@
         <h1 id="intro" style="text-align:center; margin-bottom: 40px;"><span  aria-hidden="true"></span> BAIL OR NO BAIL <span aria-hidden="true"></span></h1>
         <p class="simulationbox">
           <div class="simulation">
-            <form action="/fourth" method="post" name="form">
+            <form action="/fourth" method="post" name="form" style="margin-top:20px">
           
             
             
@@ -80,26 +80,26 @@
             <option value="shoplifting">shoplifting</option>
             <option value="contempt">contempt</option>
             </select>
-
+            <br>
        
             <div class="simbuttonwrapper">
             
-            <input class="box" type="checkbox" name="skintone" id="skintone" value="white"><label for='skintone' class="button" class="centerimage">White</label>
-            <input class="box" type="checkbox" name="skintone" id="skintone" value="nonwhite"><label for='skintone' class="button" class="centerimage">Non-white</label>
+            <input class="box" type="checkbox" name="skintone" value="white"><label for='skintone' class="button" class="centerimage">White</label>
+            <input class="box" type="checkbox" name="skintone" value="nonwhite"><label for='skintone' class="button" class="centerimage">Non-white</label>
             </div>
             <br><br>
 
             <div class="simbuttonwrapper">
             
-            <input class="box" type="checkbox" name="gender" id="gender" value="M"><label for='skintone' class="button" class="centerimage">Male</label>
-            <input class="box" type="checkbox" name="gender" id="gender" value="F"><label for='skintone' class="button" class="centerimage">Female</label>
+            <input class="box" type="checkbox" name="gender" value="M"><label for='skintone' class="button" class="centerimage">Male</label>
+            <input class="box" type="checkbox" name="gender"  value="F"><label for='skintone' class="button" class="centerimage">Female</label>
             </div>
             <br><br>
 
             <div class="simbuttonwrapper">
             
-            <input class="box" type="checkbox" name="citizenship" id="citizenship" value="True"><label for='skintone' class="button" class="centerimage">Citizen</label>
-            <input class="box" type="checkbox" name="citizenship" id="citizenship" value="False"><label for='skintone' class="button" class="centerimage">Non-Citizen</label>
+            <input class="box" type="checkbox" name="citizenship"  value="True"><label for='skintone' class="button" class="centerimage">Citizen</label>
+            <input class="box" type="checkbox" name="citizenship" value="False"><label for='skintone' class="button" class="centerimage">Non-Citizen</label>
             </div>
             <br><br>
 
@@ -107,12 +107,12 @@
           
       
           </form>
-          
+                    <h1 class="text-center" style="font-size: 4rem">{{prediction}}</h1>
+
           
           </div>
 
           </div>
-          <h1 class="text-center" style="font-size: 4rem">{{prediction}}</h1>
       </div>
 
 
